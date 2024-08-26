@@ -1,0 +1,218 @@
+<script src="/js/swiper.min.js"></script>
+<link rel="stylesheet" href="/css/swiper.min.css" />
+
+
+<div id="wrap">
+    <!--/include_header(1)/-->
+    <div id="contentWrapper">
+        <div id="mainWrap">
+            <!-- 메인 슬라이드 배너 시작 -->
+            <div id="mainSlider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!--/script_banner1/-->
+                    </div>
+                </div>
+            </div>
+            <!-- // 메인 슬라이드 배너 끝 -->
+
+
+            <!-- 중간 배너 시작  -->
+
+
+            <!-- 중간 배너 끝  -->
+
+
+            <!-- BEST ITEM - 신규상품 시작 -->
+            <div class="">
+                <h3>BEST ITEM</h3>
+                <div class="item-wrap">
+                    <div class="item-cont">
+                        <!--/loop_new_product(10)/-->
+                        <dl class="item-list">
+                            <dt class="thumb">
+                                <a href="<!--/new_product@link/-->"><img src="<!--/new_product@image_l/-->" /></a>
+                                <!--/if_new_product@link_preview/-->
+                                <p class="prd-preview">
+                                    <a href="<!--/new_product@link_preview/-->"><i class="xi-cart"></i></a>
+                                </p>
+                                <!--/end_if/-->
+                            </dt>
+                            <dd>
+                                <ul>
+                                    <!--/if_new_product@color/-->
+                                    <li class="clChip">
+                                        <!--/loop_new_product@color/-->
+                                        <span style="background:#<!--/new_product@color@code/-->"></span>
+                                        <!--/end_loop/-->
+                                    </li>
+                                    <!--/end_if/-->
+                                    <li class="prd-name"><!--/new_product@name/--></li>
+                                    <li class="prd-subname"><!--/new_product@subname/--></li>
+                                    <li class="prd-price"> <!--/if_login/-->
+                                        <!--/if_new_product@price_replace/-->
+                                        <!--/new_product@price_replace/-->
+                                        <!--/else_if_new_product@is_soldout/-->
+                                        Sold Out
+                                        <!--/else/-->
+                                        <!--/if_new_product@price_discount/-->
+                                        <span><!--/number/new_product@price_discount/-->원</span>
+                                        <del><!--/number/new_product@price_sell/-->원</del>
+                                        <!--/else/-->
+                                        <span><!--/number/new_product@price_sell/-->원</span>
+                                        <!--/if_new_product@price_consumer(+1)/-->
+                                        <del><!--/number/new_product@price_consumer/-->원</del>
+                                        <!--/end_if/-->
+                                        <!--/if_new_product@discount_percent(+1)/-->
+                                        <span class="dcPercent"><!--/new_product@discount_percent/-->%</span>
+                                        <!--/end_if/-->
+                                        <!--/end_if/-->
+                                        <!--/end_if/--> <!--/else/--> [회원가] <!--/end_if/-->
+                                    </li>
+                                    <li class="prd-ico"><!--/new_product@icons/--></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <!--/if_step(5)/-->
+                    </div>
+                    <div class="item-cont">
+                        <!--/end_if/-->
+                        <!--/end_loop/-->
+                    </div>
+                </div><!--/ .item-wrap -->
+            </div>
+            <!--// BEST ITEM - 신규상품 끝  -->
+
+            <!-- MD's PICK - 추천상품 시작 -->
+            <div id="mdPick" class="clear">
+                <div class="leftAboutInfo">
+                    <div class="Info">
+                        <p class="t1">MD's PICK</p>
+                        <p class="t2">지금 뜨고있는 상품을 추천합니다.</p>
+                        <a href="#none" class="mdBtn">추천상품 보기</a>
+                    </div>
+                </div>
+                <div class="mdPickSlider clear">
+                    <div class="mdPickContainer">
+                        <div class="swiper-wrapper">
+                            <!--/loop_recmd_product(20)/-->
+                            <div class="swiper-slide">
+                                <a href="<!--/recmd_product@link/-->">
+                                    <div class="thumb">
+                                        <img src="<!--/recmd_product@image_l/-->" class="listPic" alt="" />
+                                        <!--/if_recmd_product@link_preview/-->
+                                        <p class="prd-preview">
+                                            <a href="<!--/recmd_product@link_preview/-->"><i class="xi-cart"></i></a>
+                                        </p>
+                                        <!--/end_if/-->
+                                    </div>
+                                    <div class="listInfoBox">
+                                        <p class="listName"><!--/recmd_product@name/--></p>
+                                        <p class="subname"><!--/notag/recmd_product@subname(50,...)/--></p>
+                                        <!--/if_recmd_product@is_soldout/-->
+                                        <p class="listSoldout">Sold Out</p>
+                                        <!--/else/-->
+                                        <!--/if_recmd_product@price_replace/-->
+                                        <p class="listReplce"><!--/recmd_product@price_replace/--></p>
+                                        <!--/else/-->
+                                        <!--/if_recmd_product@price_discount/-->
+                                        <p class="listPrice"> <!--/if_login/-->
+                                            <!--/number/recmd_product@price_discount/-->원
+                                            <del><!--/number/recmd_product@price_sell/-->원</del>
+                                        </p>
+                                        <!--/else/-->
+                                        <p class="listPrice">
+                                            <!--/number/recmd_product@price_sell/-->원
+                                            <!--/if_recmd_product@price_consumer(+1)/-->
+                                            <del><!--/number/recmd_product@price_consumer/-->원</del>
+                                            <!--/end_if/-->
+                                            <!--/if_recmd_product@discount_percent(+1)/-->
+                                            <span class="dcPercent"><!--/recmd_product@discount_percent/-->%</span>
+                                            <!--/end_if/-->
+                                        </p>
+                                        <!--/end_if/--> <!--/else/--> [회원가] <!--/end_if/-->
+                                        <!--/end_if/-->
+                                        <!--/end_if/-->
+                                        <!--/if_recmd_product@icons/-->
+                                        <p><!--/recmd_product@icons/--></p>
+                                        <!--/end_if/-->
+                                    </div>
+                                </a>
+                            </div>
+                            <!--/end_loop/-->
+                        </div>
+                        <a href="#" class="swiperBtn swiper-button-next"><img
+                                src="/design/ldc7530/13199/tem173/md_arrow_right_on.png"></a>
+                        <a href="#" class="swiperBtn swiper-button-prev"><img
+                                src="/design/ldc7530/13199/tem173/md_arrow_left_on.png"></a>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- MD's PICK - 추천상품 끝 -->
+
+            <!-- SPECIAL ITEM - 스페셜상품 시작 -->
+            <div class="">
+                <h3>SPECIAL ITEM</h3>
+                <div class="item-wrap">
+                    <div class="item-cont">
+                        <!--/loop_special_product(10)/-->
+                        <dl class="item-list">
+                            <dt class="thumb">
+                                <a href="<!--/special_product@link/-->"><img
+                                        src="<!--/special_product@image_l/-->" /></a>
+                                <!--/if_special_product@link_preview/-->
+                                <p class="prd-preview">
+                                    <a href="<!--/special_product@link_preview/-->"><i class="xi-cart"></i></a>
+                                </p>
+                                <!--/end_if/-->
+                            </dt>
+                            <dd>
+                                <ul>
+                                    <!--/if_special_product@color/-->
+                                    <li class="clChip">
+                                        <!--/loop_special_product@color/-->
+                                        <span style="background:#<!--/special_product@color@code/-->"></span>
+                                        <!--/end_loop/-->
+                                    </li>
+                                    <!--/end_if/-->
+                                    <li class="prd-name"><!--/special_product@name/--></li>
+                                    <li class="prd-subname"><!--/special_product@subname/--></li>
+                                    <li class="prd-price"> <!--/if_login/-->
+                                        <!--/if_special_product@price_replace/-->
+                                        <!--/special_product@price_replace/-->
+                                        <!--/else_if_special_product@is_soldout/-->
+                                        Sold Out
+                                        <!--/else/-->
+                                        <!--/if_special_product@price_discount/-->
+                                        <span><!--/number/special_product@price_discount/-->원</span>
+                                        <del><!--/number/special_product@price_sell/-->원</del>
+                                        <!--/else/-->
+                                        <span><!--/number/special_product@price_sell/-->원</span>
+                                        <!--/if_special_product@price_consumer(+1)/-->
+                                        <del><!--/number/special_product@price_consumer/-->원</del>
+                                        <!--/end_if/-->
+                                        <!--/if_special_product@discount_percent(+1)/-->
+                                        <span class="dcPercent"><!--/special_product@discount_percent/-->%</span>
+                                        <!--/end_if/-->
+                                        <!--/end_if/-->
+                                        <!--/end_if/--> <!--/else/--> [회원가] <!--/end_if/-->
+                                    </li>
+                                    <li class="prd-ico"><!--/special_product@icons/--></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <!--/if_step(5)/-->
+                    </div>
+                    <div class="item-cont">
+                        <!--/end_if/-->
+                        <!--/end_loop/-->
+                    </div>
+                </div><!--/ .item-wrap -->
+            </div>
+            <!--// SPECIAL ITEM - 스페셜상품 끝  -->
+
+        </div><!-- #mainWrap-->
+    </div><!-- #contentWrap-->
+    <!--/include_footer(1)/-->
+</div><!-- #wrap -->

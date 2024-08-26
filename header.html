@@ -1,0 +1,136 @@
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<script src="/js/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script src="/js/util-min.js"></script>
+
+<!-- 상단 시작 -->
+<div id="hdWrap">
+    <!-- 상단 배너 시작 -->
+
+    <!--
+    <div id="headerBanner">
+        <div class="hdBannerImg">
+        </div>
+        <div class="bnClose">
+            <a href="#none" class="btnBnClose"><i class="xi-close-thin"></i></a>
+        </div>
+    </div>
+    -->
+
+
+    <!--// 상단 배너 끝 -->
+    <div class="hdArea">
+        <div class="toparea">
+            <ul class="topRight">
+                <!--/if_login/-->
+                <li class="list"><a class="link" href="<!--/link_logout/-->">LOGOUT</a></li>
+                <li class="list"><a class="link" href="<!--/link_join/-->">MYINFO</a></li>
+                <!--/else/-->
+                <li class="list"><a class="link" href="<!--/link_login/-->">LOGIN</a></li>
+                <li class="list"><a class="link" href="<!--/link_join/-->">JOIN</a></li>
+                <!--/end_if/-->
+                <li class="list"><a class="link" href="<!--/link_order/-->">ORDER</a></li>
+                <li class="list"><a class="link" href="<!--/link_mypage/-->">MYPAGE</a></li>
+            </ul>
+        </div>
+        <div class="minSizeWrap clear">
+            <div class="hdCate">
+                <div class="menuAllBtn"><img src="/design/ldc7530/13199/tem173/cate_all.png" /></div>
+                <!-- 로고 -->
+                <div class="hdLeft"><a href="<!--/link_home/-->" class="hd_logo"><!--/shop_name/--></a></div>
+                <!-- //로고 -->
+                <!-- 카테고리 -->
+                <div class="cateWrap">
+                    <!--/loop_category1(6)/-->
+                    <span class="tmenu">
+                        <a href="<!--/category1@link/-->"><!--/category1@name/--></a>
+                        <!--/if_category1@category2/-->
+                        <ul class="depth2">
+                            <!--/loop_category1@category2/-->
+                            <li><a href="<!--/category1@category2@link/-->"><!--/category1@category2@name/--></a></li>
+                            <!--/end_loop/-->
+                        </ul>
+                        <!--/end_if/-->
+                    </span>
+                    <!--/end_loop/-->
+                    <span class="tmenu">
+                        <a href="#none">COMMUNITY</a>
+                        <ul class="depth2">
+                            <!--/loop_list_board/-->
+                            <li><a href="<!--/list_board@link/-->"><!--/list_board@board_name/--></a></li>
+                            <!--/end_loop/-->
+                        </ul>
+                    </span>
+                </div>
+                <ul class="topRight">
+                    <li class="cartArea">
+                        <a href="<!--/link_basket/-->">
+                            <img src="/design/ldc7530/13199/tem173/ico_cart.jpg" />
+                            <span class="bsCount"><!--/user_basket_quantity/--></span>
+                        </a>
+                    </li>
+                    <div class="searchArea">
+                        <div class="search">
+                            <!--/form_search/-->
+                            <fieldset class="searchWrap">
+                                <legend>검색 폼</legend>
+                                <!--/input_search_word/-->
+                                <a href="<!--/link_search_button/-->" class="searhBtn"><i class="xi-search"></i></a>
+                            </fieldset>
+                            <!--/end_form/-->
+                            <a href="#none" class="searchClose"><i class="xi-close"></i></a>
+                        </div>
+                    </div>
+                </ul>
+                <!-- //카테고리 -->
+            </div>
+        </div>
+    </div>
+</div><!-- #hdWrap -->
+
+
+<!-- 전체 메뉴 레이어 -->
+<div class="allMenu">
+    <div class="allMenuWrap">
+        <a href="#none" class="closeBtn"><i class="xi-close-thin"></i></a>
+        <div class="allMenuList">
+            <!--/loop_category1(6)/-->
+            <dl>
+                <dt><a href="<!--/category1@link/-->"><!--/category1@name/--></a></dt>
+                <!--/if_category1@category2/-->
+                <!--/loop_category1@category2/-->
+                <dd><a href="<!--/category1@category2@link/-->"><!--/category1@category2@name/--></a></dd>
+                <!--/end_loop/-->
+                <!--/end_if/-->
+            </dl>
+            <!--/if_idx(6)/-->
+        </div>
+        <div class="allMenuList">
+            <!--/end_if/-->
+            <!--/end_loop/-->
+            <dl>
+                <dt><a href="#">COMMUNITY</a></dt>
+                <!--/loop_list_board/-->
+                <dd><a href="<!--/list_board@link/-->"><!--/list_board@board_name/--></a></dd>
+                <!--/end_loop/-->
+                <dd><a href="/board/board.html?code=ldc7530_board1">REVIEW</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="<!--/link_mypage/-->">MYPAGE</a></dt>
+                <dd><a href="<!--/link_join/-->">내정보</a></dd>
+                <dd><a href="<!--/link_order/-->">주문/배송</a></dd>
+                <dd><a href="/shop/mypage.html?mypage_type=mycoupon">쿠폰내역</a></dd>
+                <dd><a href="<!--/link_reserve/-->">적립금내역</a></dd>
+                <dd><a href="/shop/mypage.html?mypage_type=mywishlist">관심상품</a></dd>
+                <dd><a href="/shop/todaygoods.html">최근본상품</a></dd>
+            </dl>
+        </div>
+        <div class="csInfo">
+            <p>
+                <strong>010-2443-1264</strong> <span>|</span> MON - FRI AM 09:00 ~ PM 06:00 <span>|</span> SAT, SUN,
+                HOLIDAY OFF
+            </p>
+        </div>
+    </div>
+</div>
+<!-- // 전체메뉴 레이어 -->
