@@ -233,6 +233,10 @@ body {
         height: 50% !important;
     }
 
+    .site-footer {
+        height: 340px !important;
+    }
+
     .site-footer .footerInfoWrap {
         display: flex;
         flex-direction: column;
