@@ -1,5 +1,4 @@
 $(window).scroll(function () {
-    // 상단 고정
     if ($(window).scrollTop() > 16) {
         $(".top-nav").hide();
     } else {
@@ -67,7 +66,7 @@ $(document).ready(function () {
     });
 
     $(window).on('resize', function () {
-        showSlides(); // 창 크기 변경 시 슬라이드 위치를 조정
+        showSlides();
     });
 
     showSlides();

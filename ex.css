@@ -21,9 +21,23 @@ body {
 }
 
 /* 상단 네비게이션 스타일 */
+.top-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 54px;
+}
+
 .top-nav__list {
     list-style-type: none;
-    padding: 5px 20px 20px 20px;
+    /* padding: 5px 20px 20px 20px; */
+}
+
+.align_left {
+    text-align: left;
+}
+
+.align_right {
     text-align: right;
 }
 
