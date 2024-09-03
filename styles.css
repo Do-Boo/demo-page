@@ -468,7 +468,7 @@ footer {
 
 @media (max-width: 480px) {
     .product-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr;
     }
 
     .slider-item {
