@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+
+
     // 슬라이더 기능
     const slider = document.querySelector('.slider-container');
     const slides = slider.querySelectorAll('.slider-item');
@@ -56,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileDrawer = document.querySelector('.mobile-drawer');
     const closeDrawerButton = document.querySelector('.close-drawer');
     const drawerOverlay = document.querySelector('.drawer-overlay');
+    const submenuToggles = document.querySelectorAll('.submenu-toggle');
 
     function openDrawer() {
         mobileDrawer.classList.add('open');
@@ -72,6 +76,19 @@ document.addEventListener('DOMContentLoaded', function () {
     drawerOverlay.addEventListener('click', closeDrawer);
 
     document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    submenuToggles.forEach(toggle => {
+        toggle.addEventListener('click', function () {
+            const submenu = this.nextElementSibling;
+            if (submenu.style.display === 'block') {
+                submenu.style.display = 'none';
+                this.textContent = '+';
+            } else {
+                submenu.style.display = 'block';
+                this.textContent = '-';
+            }
+        });
+    });
 
     function ctrlShiftKey(e, keyCode) {
         return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
