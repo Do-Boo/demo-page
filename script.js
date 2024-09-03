@@ -90,6 +90,33 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    const menuSlider = document.querySelector('.mobile-menu-slider');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    menuSlider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - menuSlider.offsetLeft;
+        scrollLeft = menuSlider.scrollLeft;
+    });
+
+    menuSlider.addEventListener('mouseleave', () => {
+        isDown = false;
+    });
+
+    menuSlider.addEventListener('mouseup', () => {
+        isDown = false;
+    });
+
+    menuSlider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - menuSlider.offsetLeft;
+        const walk = (x - startX) * 2;
+        menuSlider.scrollLeft = scrollLeft - walk;
+    });
+
     function ctrlShiftKey(e, keyCode) {
         return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
     }
