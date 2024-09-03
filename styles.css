@@ -463,7 +463,6 @@ footer {
 
     .slider-item {
         height: 300px;
-        /* 모바일에서 슬라이더 높이 조정 */
     }
 }
 
@@ -474,6 +473,5 @@ footer {
 
     .slider-item {
         height: 200px;
-        /* 작은 모바일 화면에서 슬라이더 높이 조정 */
     }
 }
