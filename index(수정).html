@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel="stylesheet" href="ex.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="ex.js"></script>
+    <script src="footer.js"></script>
+</head>
+
+<body>
+    <script>
+        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <!-- <script defer src="/_vercel/speed-insights/script.js"></script> -->
+
+    <div class="site-header fixed">
+        <nav class="top-nav">
+            <ul class="top-nav__list align_left">
+                <li class="top-nav__item">
+                    <a href="#" class="top-nav__link">
+                        <img src="./img_menu.svg" style="top: 0px;" class="svg-icon">
+                    </a>
+                </li>
+            </ul>
+            <ul class="top-nav__list align_right">
+                <li class="top-nav__item"><a href="#" class="top-nav__link">회원가입</a></li>
+                <li class="top-nav__item">
+                    <h href="#" class="top-nav__link">|</h>
+                </li>
+                <li class="top-nav__item"><a href="#" class="top-nav__link">로그인</a></li>
+                <li class="top-nav__item">
+                    <h href="#" class="top-nav__link">|</h>
+                </li>
+                <li class="top-nav__item"><a href="#" class="top-nav__link">주문조회</a></li>
+                <li class="top-nav__item">
+                    <h href="#" class="top-nav__link">|</h>
+                </li>
+                <li class="top-nav__item"><a href="#" class="top-nav__link">최근본상품</a></li>
+                <li class="top-nav__item">
+                    <h href="#" class="top-nav__link">|</h>
+                </li>
+                <li class="top-nav__item"><a href="#" class="top-nav__link">고객센터</a></li>
+            </ul>
+        </nav>
+        <div class="site-logo">
+            <a href="#">
+                <h1>AllModelCase</h1>
+            </a>
+            <!-- <img src="logo.png" alt="STI MOBILE" class="site-logo__image"> -->
+        </div>
+        <nav class="main-nav">
+            <ul class="main-nav__list">
+                <span class="main-nav__item">
+                    <a href="#" class="main-nav__link">신제품</a>
+                    <ul class="main-nav__sub__item">
+                        <li><a href="#" class="main-nav__link">서브메뉴1</a></li>
+                        <li><a href="#" class="main-nav__link">서브메뉴1</a></li>
+                        <li><a href="#" class="main-nav__link">서브메뉴1</a></li>
+                        <li><a href="#" class="main-nav__link">서브메뉴1</a></li>
+                    </ul>
+                </span>
+                <span class="main-nav__item">
+                    <a href="#" class="main-nav__link">제작상품</a>
+                    <ul class="main-nav__sub__item">
+                        <li><a href="#" class="main-nav__link">서브메뉴1</a></li>
+                        <li><a href="#" class="main-nav__link">서브메뉴1</a></li>
+                        <li><a href="#" class="main-nav__link">서브메뉴1</a></li>
+                        <li><a href="#" class="main-nav__link">서브메뉴1</a></li>
+                    </ul>
+                </span>
+                <span class="main-nav__item">
+                    <a href="#" class="main-nav__link">케이스</a>
+                </span>
+                <span class="main-nav__item">
+                    <a href="#" class="main-nav__link">거치대</a>
+                </span>
+                <span class="main-nav__item">
+                    <a href="#" class="main-nav__link">충전기기</a>
+                </span>
+                <span class="main-nav__item">
+                    <a href="#" class="main-nav__link">필름/강화유리</a>
+                </span>
+                <span class="main-nav__item">
+                    <a href="#" class="main-nav__link">블루투스/음향기기</a>
+                </span>
+                <span class="main-nav__item">
+                    <a href="#" class="main-nav__link">악세사리&기타</a>
+                </span>
+                <span class="main-nav__item">
+                    <a href="#" class="main-nav__link">|</a>
+                </span>
+                <span class="main-nav__item">
+                    <a href="#" class="main-nav__link">삼성</a>
+                </span>
+                <span class="main-nav__item">
+                    <a href="#" class="main-nav__link">애플</a>
+                </span>
+                <span class="main-nav__item">
+                    <a href="#" class="main-nav__link">기타 제조사</a>
+                </span>
+                <div class="main-nav__menu__list">
+                    <a href="#" class="main-nav__link">
+                        <img src="img_search.svg" class="svg-icon">
+                    </a>
+                    <a href="#" class="main-nav__link">
+                        <img src="img_profile.svg" class="svg-icon">
+                    </a>
+                    <a href="#" class="main-nav__link">
+                        <img src="img_basket.svg" class="svg-icon">
+                    </a>
+                </div>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="site-main">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <a href="#"><img src="main_rolling1.jpg"></a>
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="main_rolling2.jpg"></a>
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="main_rolling3.jpg"></a>
+                </div>
+                <div class="slide">
+                    <a href="#"><img src="main_rolling4.jpg"></a>
+                </div>
+            </div>
+            <div class="navigation-manual">
+                <span class="manual-btn" data-slide="0"></span>
+                <span class="manual-btn" data-slide="1"></span>
+                <span class="manual-btn" data-slide="2"></span>
+                <span class="manual-btn" data-slide="3"></span>
+            </div>
+
+        </div>
+        <div class="items_list">
+            <div class="title">
+                <a href="#">BSET ITEM</a>
+            </div>
+            <div class="sub-title">
+                <a href="#">인기 상품</a>
+            </div>
+
+            <div class="product-list">
+                <div class="product-item">
+                    <div class="image-container">
+                        <img src="img_item1.jpg" alt="Case 1">
+                    </div>
+                    <a href="#" class="product-name">케이스 1</a>
+                    <a href="#" class="product-description">상품 설명 1</a>
+                </div>
+                <div class="product-item">
+                    <div class="image-container">
+                        <img src="img_item2.jpg" alt="Case 1">
+                    </div>
+                    <a href="#" class="product-name">케이스 1</a>
+                    <a href="#" class="product-description">상품 설명 1</a>
+                </div>
+                <div class="product-item">
+                    <div class="image-container">
+                        <img src="img_item3.jpg" alt="Case 1">
+                    </div>
+                    <a href="#" class="product-name">케이스 1</a>
+                    <a href="#" class="product-description">상품 설명 1</a>
+                </div>
+                <div class="product-item">
+                    <div class="image-container">
+                        <img src="img_item4.jpg" alt="Case 1">
+                    </div>
+                    <a href="#" class="product-name">케이스 1</a>
+                    <a href="#" class="product-description">상품 설명 1</a>
+                </div>
+                <div class="product-item">
+                    <div class="image-container">
+                        <img src="img_item4.jpg" alt="Case 1">
+                    </div>
+                    <a href="#" class="product-name">케이스 1</a>
+                    <a href="#" class="product-description">상품 설명 1</a>
+                </div>
+
+                <div class="product-item">
+                    <div class="image-container">
+                        <img src="img_item1.jpg" alt="Case 1">
+                    </div>
+                    <a href="#" class="product-name">케이스 1</a>
+                    <a href="#" class="product-description">상품 설명 1</a>
+                </div>
+                <div class="product-item">
+                    <div class="image-container">
+                        <img src="img_item2.jpg" alt="Case 1">
+                    </div>
+                    <a href="#" class="product-name">케이스 1</a>
+                    <a href="#" class="product-description">상품 설명 1</a>
+                </div>
+                <div class="product-item">
+                    <div class="image-container">
+                        <img src="img_item3.jpg" alt="Case 1">
+                    </div>
+                    <a href="#" class="product-name">케이스 1</a>
+                    <a href="#" class="product-description">상품 설명 1</a>
+                </div>
+                <div class="product-item">
+                    <div class="image-container">
+                        <img src="img_item4.jpg" alt="Case 1">
+                    </div>
+                    <a href="#" class="product-name">케이스 1</a>
+                    <a href="#" class="product-description">상품 설명 1</a>
+                </div>
+                <div class="product-item">
+                    <div class="image-container">
+                        <img src="img_item4.jpg" alt="Case 1">
+                    </div>
+                    <a href="#" class="product-name">케이스 1</a>
+                    <a href="#" class="product-description">상품 설명 1</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="site-footer">
+
+        <div class="footerInfoWrap">
+            <div class="info">
+                <address class="subTxt">
+                    <p class="tel">032-524-0106</p>
+                    <p class="csCenter">평일 11:00~ 21:30&nbsp;&nbsp;점심시간 12:30~13:30&nbsp;&nbsp;주말, 공휴일 휴무&nbsp;&nbsp;
+                    </p>
+                    <p class="cpTxt">회사명 전기종케이스&nbsp;&nbsp; 대표 임대철&nbsp;&nbsp; 주소 인천 부평구 시장로 지하 10, 다동 62,63,64호
+                        (부평동,부평중앙지하상가)<br>
+                        사업자번호 122-31-38891 <a
+                            href="https://www.ftc.go.kr/www/biz/bizCommList.do?key=5375&amp;searchCnd=wrkr_no&amp;searchKrwd=1223138891"
+                            target="_blank">[사업자정보확인]</a>&nbsp;&nbsp; 통신판매번호 제 2020-인천부평-2477 호<br>
+                        대표전화 032-524-0106&nbsp;&nbsp; 개인정보보호책임자 임대철&nbsp;&nbsp; 이메일 <a
+                            href="javascript: __mk_open('/html/email.html', 'link_send_mail', 'width=600px, height=400px, scrollbars=yes');">ldc7530@naver.com</a>
+                    </p>
+                    <p class="copy">Copyright © All Rights Reserved. &nbsp;&nbsp;<a href="https://www.dizi.kr/"
+                            target="_blank">designed by dizi.kr</a></p>
+                </address>
+            </div>
+            <div class="ftMenu">
+                <ul>
+                    <li>
+                        <ul class="footerNav">
+                            <li><a href="/index.html">홈</a></li>
+                            <li><a href="javascript:view_join_terms();">이용약관</a></li>
+                            <li><a href="javascript:bottom_privacy();"><b>개인정보처리방침</b></a></li>
+                            <li><a href="/html/info.html">쇼핑몰 이용안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="footerNav">
+                            <li><a href="/board/board.html?code=ldc7530_board2">공지사항</a></li>
+                            <li><a href="/board/board.html?code=ldc7530">상품문의</a></li>
+                            <li><a href="/board/board.html?code=ldc7530_board1">상품후기</a></li>
+                            <li><a href="/shop/faq.html">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="snsArea">
+                            <!-- SNS버튼 -->
+                            <li><a href="http://www.facebook.com" target="_blank"><i class="xi-facebook"></i></a></li>
+                            <li><a href="http://www.instagram.com" target="_blank"><i class="xi-instagram"></i></a></li>
+                            <li><a href="http://blog.naver.com" target="_blank"><i class="xi-naver"></i></a></li>
+                            <li><a href="http://story.kakao.com" target="_blank"><i class="xi-kakaostory"></i></a></li>
+                            <li><a href="https://www.youtube.com/" target="_blank"><i class="xi-youtube-play"></i></a>
+                            </li>
+                            <li><a href="http://story.kakao.com" target="_blank"><i class="xi-kakaotalk"></i></a></li>
+                            <!-- //SNS버튼 -->
+                        </ul>
+                        <p class="escrow">
+                            고객님의 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰이 가입한 PG 에스크로 구매안전 서비스를 이용하실 수 있습니다.
+                            <a href="">가입사실확인 &gt;</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>
