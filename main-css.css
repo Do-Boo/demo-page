@@ -207,13 +207,3 @@ footer {
         height: 300px;
     }
 }
-
-@media (max-width: 480px) {
-    .product-list {
-        grid-template-columns: 2fr;
-    }
-
-    .slider-item {
-        height: 200px;
-    }
-}
