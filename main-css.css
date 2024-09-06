@@ -238,7 +238,6 @@ body {
     flex: 0 0 auto;
     width: 16.666%;
     text-align: center;
-    /* padding: 10px; */
     scroll-snap-align: start;
 }
 
@@ -250,6 +249,10 @@ body {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
+}
+
+.category-item.menu img {
+    object-fit: none;
 }
 
 .category-item:hover img {
@@ -345,6 +348,11 @@ footer {
 
     .category-item {
         width: 33.333%;
+    }
+
+    .product-slider-container .next-slide,
+    .product-slider-container .prev-slide {
+        display: none;
     }
 
 }

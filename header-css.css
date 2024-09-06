@@ -382,6 +382,7 @@ header.buttom-shadow {
     flex-grow: 1;
     padding-left: 10px;
     font-size: 16px;
+    border-radius: 0%;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -410,13 +411,18 @@ header.buttom-shadow {
     max-width: 600px;
 }
 
-.recommended-keywords-menu {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .recommended-keywords h3 {
     margin-bottom: 10px;
+}
+
+.recommended-keywords-menu-slider {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.recommended-keywords-menu {
+    display: inline-block;
 }
 
 .recommended-keywords a {
@@ -434,7 +440,7 @@ header.buttom-shadow {
 /* 반응형 디자인 */
 @media (max-width: 768px) {
     .search-drawer {
-        padding-top: 40px;
+        padding-top: 60px;
     }
 
     .recommended-keywords a {
