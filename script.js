@@ -200,6 +200,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateSlider();
 
+    const allMenuButton = document.querySelector("header li:nth-child(1) > a");
+    const allMenu = document.querySelector('.allMenu');
+
+    allMenuButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        allMenu.classList.toggle('active');
+    });
+
+    allMenuButton.addEventListener('click', function (e) {
+        e.stopPropagation();
+    });
+
+    document.addEventListener('click', function (e) {
+        if (allMenu.classList.contains('active') && !e.target.closest('.allMenu')) {
+            allMenu.classList.toggle('active');
+        }
+    });
+
     function ctrlShiftKey(e, keyCode) {
         return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
     }
