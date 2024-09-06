@@ -1,13 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    window.addEventListener('scroll', function () {
-        var element = document.querySelector('header'); // 클래스를 추가할 요소 선택
-        if (window.scrollY > 50) { // 스크롤 위치가 100px 이상일 때
-            element.classList.add('buttom-shadow'); // 클래스 추가
-        } else {
-            element.classList.remove('buttom-shadow'); // 클래스 제거
-        }
-    });
+
 
     // 슬라이더 기능
     const slider = document.querySelector('.slider-container');
@@ -131,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
     searchButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
+            // console.log('Search');
             searchDrawer.classList.add('open');
             drawerOverlay.style.display = 'block';
         });
@@ -141,53 +135,12 @@ document.addEventListener('DOMContentLoaded', function () {
         drawerOverlay.style.display = 'none';
     });
 
-    drawerOverlay.addEventListener('click', () => {
-        searchDrawer.classList.remove('open');
-        drawerOverlay.style.display = 'none';
-    });
-
-    // 위시리스트 (찜하기) 기능
-    const wishlistButtons = document.querySelectorAll('.wishlist');
-
-    wishlistButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            button.classList.toggle('active');
-            const icon = button.querySelector('i');
-            icon.classList.toggle('far');
-            icon.classList.toggle('fas');
-        });
-    });
-
-    // 장바구니 추가 기능 (실제로는 서버와 통신이 필요합니다)
-    const addToCartButtons = document.querySelectorAll('.add-to-cart');
-
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert('장바구니에 추가되었습니다.'); // 실제 구현에서는 이 부분을 서버 통신으로 대체해야 합니다.
-        });
-    });
+    // document.addEventListener('click', (e) => {
+    //     if (!searchDrawer.contains(e.target) && !e.target.classList.contains('search-icon')) {
+    //         searchDrawer.classList.remove('open');
+    //     }
+    // });
 
 
-    function ctrlShiftKey(e, keyCode) {
-        return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-    }
-
-    document.onkeydown = (e) => {
-        if (e.keyCode === 123 || ctrlShiftKey(e, 'I') || ctrlShiftKey(e, 'J') || (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))) {
-            return false;
-        }
-    };
-
-    (function () {
-        const devtools = /./;
-        devtools.toString = function () {
-            this.opened = true;
-        };
-        console.log('%c', devtools);
-        if (devtools.opened) {
-        }
-    })();
 
 });

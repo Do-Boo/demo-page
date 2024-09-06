@@ -134,6 +134,41 @@ body {
     color: #000;
 }
 
+.add-to-cart,
+.wishlist {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.product-item:hover .add-to-cart,
+.product-item:hover .wishlist {
+    opacity: 1;
+}
+
+.add-to-cart {
+    top: 10px;
+    right: 10px;
+}
+
+.wishlist {
+    bottom: 10px;
+    left: 10px;
+}
+
+.add-to-cart i,
+.wishlist i {
+    font-size: 18px;
+    color: #333;
+}
+
+.wishlist.active i {
+    color: red;
+}
+
 /* 푸터 스타일 */
 footer {
     background-color: #f8f8f8;
