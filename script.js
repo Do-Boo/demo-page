@@ -181,14 +181,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function bestPrevSlide() {
         if (currentIndex > 0) {
-            currentIndex--;
+            currentIndex = currentIndex - 4;
             updateSlider();
         }
     }
 
     function bestNextSlide() {
         if (currentIndex < productItems.length - 4) {
-            currentIndex++;
+            currentIndex = currentIndex + 4;
             updateSlider();
         }
     }

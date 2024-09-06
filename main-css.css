@@ -120,7 +120,7 @@ body {
 
 .product-list {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 1s ease;
 }
 
 .product-item {
@@ -163,7 +163,7 @@ body {
     position: absolute;
     padding: 10px;
     border-radius: 50%;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.5s ease;
     opacity: 0;
     z-index: 1000;
 }
@@ -214,6 +214,58 @@ body {
 .product-slider-container .next-slide {
     right: -80px;
 }
+
+.category-menu {
+    max-width: 1200px;
+    margin: 30px auto;
+    overflow: hidden;
+}
+
+.category-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.category-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.category-item {
+    flex: 0 0 auto;
+    width: 16.666%;
+    text-align: center;
+    /* padding: 10px; */
+    scroll-snap-align: start;
+}
+
+.category-item img {
+    width: 80px;
+    height: 80px;
+    padding: 8px;
+    border: 1px solid #0000001f;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.category-item:hover img {
+    background-color: #00000007;
+}
+
+.category-item span {
+    display: block;
+    font-size: 14px;
+    color: #636363;
+}
+
+.category-item:hover span {
+    color: #090909;
+}
+
 
 /* 푸터 스타일 */
 footer {
@@ -289,6 +341,10 @@ footer {
 
     .slider-item {
         height: 300px;
+    }
+
+    .category-item {
+        width: 33.333%;
     }
 
 }
