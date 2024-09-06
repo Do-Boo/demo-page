@@ -16,6 +16,12 @@
           "-webkit-overflow-scrolling"
         ]
       }
+    ],
+    "axe/keyboard": [
+      "default",
+      {
+        "nested-interactive": "off"
+      }
     ]
   }
 }

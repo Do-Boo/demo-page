@@ -153,9 +153,6 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', (e) => {
             e.preventDefault();
             button.classList.toggle('active');
-            const icon = button.querySelector('i');
-            icon.classList.toggle('far');
-            icon.classList.toggle('fas');
         });
     });
 
@@ -165,10 +162,43 @@ document.addEventListener('DOMContentLoaded', function () {
     addToCartButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
-            alert('장바구니에 추가되었습니다.'); // 실제 구현에서는 이 부분을 서버 통신으로 대체해야 합니다.
+            alert('장바구니에 추가되었습니다.');
         });
     });
 
+    const productSlider = document.querySelector('.product-slider');
+    const productList = productSlider.querySelector('.product-list');
+    const bestPrevSlider = document.querySelector('.product-slider-container .prev-slide');
+    const bestNextSlider = document.querySelector('.product-slider-container .next-slide');
+    const productItems = productList.querySelectorAll('.product-item');
+    let currentIndex = 0;
+
+
+    function updateSlider() {
+        const itemWidth = productItems[0].clientWidth;
+        productList.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    }
+
+    function bestPrevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateSlider();
+        }
+    }
+
+    function bestNextSlide() {
+        if (currentIndex < productItems.length - 4) {
+            currentIndex++;
+            updateSlider();
+        }
+    }
+
+    window.addEventListener('resize', updateSlider);
+
+    bestPrevSlider.addEventListener('click', bestPrevSlide);
+    bestNextSlider.addEventListener('click', bestNextSlide);
+
+    updateSlider();
 
     function ctrlShiftKey(e, keyCode) {
         return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);

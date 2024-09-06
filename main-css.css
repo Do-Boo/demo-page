@@ -83,6 +83,10 @@ body {
 }
 
 /* 제품 그리드 스타일 */
+.product-slider-container {
+    position: relative;
+}
+
 .product-grid {
     max-width: 1200px;
     margin: 50px auto;
@@ -101,27 +105,47 @@ body {
     margin-bottom: 30px;
 }
 
+.more-btn {
+    width: 100%;
+    text-align: right;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.product-slider {
+    position: relative;
+    overflow: hidden;
+}
+
 .product-list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
 .product-item {
+    flex: 0 0 calc(25% - 20px);
+    padding-right: 10px;
+    padding-left: 10px;
     text-align: center;
-    transition: transform 0.3s ease;
 }
 
-.product-item:hover {
-    transform: scale(1.05);
+.product-image {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
 }
 
-.product-item img {
+.product-image img {
     width: 100%;
     height: auto;
-    max-height: 220px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-image img:hover {
+    transform: scale(1.1);
 }
 
 .product-item h3 {
@@ -137,36 +161,58 @@ body {
 .add-to-cart,
 .wishlist {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 5px;
+    padding: 10px;
     border-radius: 50%;
     transition: opacity 0.3s ease;
     opacity: 0;
+    z-index: 1000;
 }
 
-.product-item:hover .add-to-cart,
-.product-item:hover .wishlist {
+.add-to-cart,
+.wishlist svg {
+    width: 20px;
+    height: 20px;
+    color: #e0e0e0;
+}
+
+.product-image:hover .add-to-cart,
+.product-image:hover .wishlist {
     opacity: 1;
 }
 
-.add-to-cart {
-    top: 10px;
-    right: 10px;
-}
-
 .wishlist {
-    bottom: 10px;
-    left: 10px;
+    bottom: 2px;
+    left: 5px;
 }
 
-.add-to-cart i,
-.wishlist i {
-    font-size: 18px;
-    color: #333;
+.add-to-cart {
+    bottom: 5px;
+    right: 3px;
 }
 
-.wishlist.active i {
+.wishlist.active svg {
     color: red;
+    fill: red;
+}
+
+.product-slider-container .prev-slide,
+.product-slider-container .next-slide {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.05);
+    top: calc(50% - 40px);
+    color: white;
+    border: none;
+    padding: 5px 5px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.product-slider-container .prev-slide {
+    left: -80px;
+}
+
+.product-slider-container .next-slide {
+    right: -80px;
 }
 
 /* 푸터 스타일 */
@@ -225,7 +271,10 @@ footer {
     }
 
     .product-list {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        transition: transform 0.5s ease;
     }
 
     .footer-content {
@@ -241,4 +290,5 @@ footer {
     .slider-item {
         height: 300px;
     }
+
 }
