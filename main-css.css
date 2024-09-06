@@ -164,19 +164,19 @@ body {
     padding: 10px;
     border-radius: 50%;
     transition: opacity 0.5s ease;
-    opacity: 0;
     z-index: 1000;
 }
 
-.add-to-cart,
+.add-to-cart svg,
 .wishlist svg {
+    opacity: 0;
     width: 20px;
     height: 20px;
     color: #e0e0e0;
 }
 
-.product-image:hover .add-to-cart,
-.product-image:hover .wishlist {
+.product-image:hover .add-to-cart svg,
+.product-image:hover .wishlist svg {
     opacity: 1;
 }
 
@@ -191,6 +191,7 @@ body {
 }
 
 .wishlist.active svg {
+    opacity: 1;
     color: red;
     fill: red;
 }
