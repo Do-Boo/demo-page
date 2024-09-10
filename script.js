@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
         isDown = true;
         startX = e.pageX - menuSlider.offsetLeft;
         scrollLeft = menuSlider.scrollLeft;
+        allMenu.classList.remove('active');
     });
 
     menuSlider.addEventListener('mouseleave', () => {
@@ -216,6 +217,26 @@ document.addEventListener('DOMContentLoaded', function () {
         if (allMenu.classList.contains('active') && !e.target.closest('.allMenu')) {
             allMenu.classList.toggle('active');
         }
+    });
+
+    const productTitles = document.querySelectorAll('.product-item h3');
+    const tagStyles = {
+        '[할인]': 'color: #ff0000;', // 빨간색
+        '[필수]': 'color: #0000ff;', // 파란색
+        '[추천]': 'color: #008000;'  // 녹색
+    };
+
+    productTitles.forEach(title => {
+        let text = title.textContent;
+        Object.keys(tagStyles).forEach(tag => {
+            const tagIndex = text.indexOf(tag);
+            if (tagIndex !== -1) {
+                const beforeTag = text.substring(0, tagIndex);
+                const afterTag = text.substring(tagIndex + tag.length);
+                text = beforeTag + `<span style="${tagStyles[tag]}">${tag}</span>` + afterTag;
+            }
+        });
+        title.innerHTML = text;
     });
 
     function ctrlShiftKey(e, keyCode) {
