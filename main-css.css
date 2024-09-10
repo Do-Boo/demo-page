@@ -21,7 +21,7 @@ body {
 
 .slider-item {
     flex: 0 0 100%;
-    height: 400px;
+    height: 500px;
     position: relative;
     overflow: hidden;
 }
