@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentIndex = 0;
 
 
-    function updateSlider() {
+    function bestProductupdateSlider() {
         const itemWidth = productItems[0].clientWidth;
         productList.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
     }
@@ -238,23 +238,23 @@ document.addEventListener('DOMContentLoaded', function () {
     function bestPrevSlide() {
         if (currentIndex > 0) {
             currentIndex = currentIndex - 4;
-            updateSlider();
+            bestProductupdateSlider();
         }
     }
 
     function bestNextSlide() {
         if (currentIndex < productItems.length - 4) {
             currentIndex = currentIndex + 4;
-            updateSlider();
+            bestProductupdateSlider();
         }
     }
 
-    window.addEventListener('resize', updateSlider);
+    window.addEventListener('resize', bestProductupdateSlider);
 
     bestPrevSlider.addEventListener('click', bestPrevSlide);
     bestNextSlider.addEventListener('click', bestNextSlide);
 
-    updateSlider();
+    bestProductupdateSlider();
 
     const allMenuButton = document.querySelector("header li:nth-child(1) > a");
     const allMenu = document.querySelector('.allMenu');
