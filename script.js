@@ -9,6 +9,61 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    const topBanner = document.getElementById('topBanner');
+    const closeBanner = document.getElementById('closeBanner');
+    const hideForDay = document.getElementById('hideForDay');
+
+    // 저장된 설정 확인
+    const bannerHidden = localStorage.getItem('bannerHidden');
+    const bannerHiddenTime = localStorage.getItem('bannerHiddenTime');
+
+    // 배너가 숨겨져 있고, 24시간이 지나지 않았다면 배너를 숨김
+    if (bannerHidden && bannerHiddenTime) {
+        const now = new Date().getTime();
+        if (now - parseInt(bannerHiddenTime) < 60) {
+            // if (now - parseInt(bannerHiddenTime) < 24 * 60 * 60 * 1000) {
+            topBanner.style.display = 'none';
+            adjustHeaderPosition();
+        } else {
+            // 24시간이 지났다면 저장된 설정 삭제
+            localStorage.removeItem('bannerHidden');
+            localStorage.removeItem('bannerHiddenTime');
+        }
+    }
+
+    // 닫기 버튼 클릭 이벤트
+    closeBanner.addEventListener('click', function () {
+        topBanner.style.display = 'none';
+        adjustHeaderPosition();
+        if (hideForDay.checked) {
+            localStorage.setItem('bannerHidden', 'true');
+            localStorage.setItem('bannerHiddenTime', new Date().getTime());
+        }
+    });
+
+    // 헤더 위치 조정 함수
+    function adjustHeaderPosition() {
+        const header = document.querySelector('header');
+        if (topBanner.style.display === 'none') {
+            header.style.top = '0';
+        } else {
+            header.style.top = topBanner.offsetHeight + 'px';
+        }
+        adjustBodyPadding();
+    }
+
+    // body 패딩 조정 함수
+    function adjustBodyPadding() {
+        const header = document.querySelector('header');
+        document.body.style.paddingTop = (topBanner.offsetHeight + header.offsetHeight) + 'px';
+    }
+
+    // 초기 위치 설정
+    adjustHeaderPosition();
+
+    // 윈도우 리사이즈 시 위치 재조정
+    window.addEventListener('resize', adjustHeaderPosition);
+
     // 슬라이더 기능
     const slider = document.querySelector('.slider-container');
     const slides = slider.querySelectorAll('.slider-item');

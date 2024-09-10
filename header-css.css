@@ -9,6 +9,69 @@
     left: 0;
     right: 0;
     z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content {
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 50px;
+}
+
+.banner-text {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.banner-controls {
+    position: absolute;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.banner-controls label {
+    margin-right: 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.banner-controls input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#closeBanner {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+@media (max-width: 768px) {
+    .top-banner {
+        padding: 10px;
+    }
+
+    .banner-content {
+        padding: 0 30px;
+    }
+
+    .banner-controls {
+        right: 10px;
+    }
+
+    .hide-for-day {
+        display: none !important;
+    }
 }
 
 /* 헤더 스타일 */
